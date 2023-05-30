@@ -1,0 +1,139 @@
+body {
+    background-color: #55B7E7 !important;
+    /*overflow: hidden;*/
+}
+
+.FooterBottom {
+    background-color: #eee !important;
+    height: auto;
+    text-align: center;
+    padding: 1%;
+}
+
+.containerMain {
+    margin-top: 2% !important;
+    text-align: center;
+    /* margin-bottom: 20% !important; */
+}
+
+.containerStatusbox {
+    margin: 2%;
+    background-color: #eee;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 85% !important;
+    text-align: center !important;
+}
+
+.containerSortingUnit {
+    /* Testing container properties etc */
+    background-color: #eee;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center !important;
+}
+
+.rowStatusbox {
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.colimg {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.colimgOven {
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.processHeader {
+    /* border-bottom: 2px solid black; */
+    padding: 1%;
+    background-color: white;
+}
+
+.colButton {
+    padding-top: 1%;
+}
+
+/* Warehouse page */
+.containerUnit {
+    /* background-color: #eee; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.colSideMenu {
+    /* border-left: 3px solid black; */
+    background-color: #F8F9FA;
+    /* border-bottom: 2px solid #eee; */
+    /* border-top: 2px solid #eee; */
+    /* border-radius: 10px; */
+}
+
+.menuPart {
+    margin: 2%;
+}
+
+.containerStatus {
+    background-color: #F8F9FA;
+    text-align: center;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-top: 8%;
+    padding: 1%;
+}
+
+.containerStatusEM {
+    background-color: #F8F9FA;
+    text-align: center;
+    /* border: 4px solid black; */
+    border-radius: 10px;
+    margin-top: 6%;
+    padding: 1%;
+}
+
+.containerStatusHome {
+    background-color: #F8F9FA;
+    text-align: center;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-top: 2%;
+    padding: 1%;
+}
+
+.rowEM {
+    text-align: center;
+    background-color: #eee;
+    margin-top: 4% !important;
+    /* border: 4px solid black; */
+    border-radius: 10px;
+}
+
+.headerCM {
+    text-align: center;
+    margin-top: 4%;
+}
+
+.headerModal {
+    text-align: center;
+}
+
+.rowAlarm {
+    border-top: 4px solid black;
+    /* text-align: center; */
+    padding-top: 2%;
+}
+
+.headerAlarm {
+    margin-top: 6%;
+}
+
+.containerProcessControl {
+    margin-top: 5% !important;
+}
