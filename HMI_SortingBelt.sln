@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business - Layer", "Busines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data - Layer", "Data - Layer\Data - Layer.csproj", "{F398F169-5942-4601-B61C-6E22B05E72B8}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdvancedHMI", "..\AdvancedHMI\AdvancedHMIv399xR1\AdvancedHMI\AdvancedHMI.vbproj", "{13A180B0-1183-4CB7-AC14-BF98320A30E4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdvancedHMIControls", "..\AdvancedHMI\AdvancedHMIv399xR1\AdvancedHMIControls\AdvancedHMIControls.vbproj", "{928F9169-93D6-4E5F-8130-C8B1F4D3CC6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedHMIcs", "..\AdvancedHMI\AdvancedHMIv399xR1\AdvancedHMICS\AdvancedHMIcs.csproj", "{6D7FE5B1-EF17-4966-AA84-77A5DBD1C40E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdvancedHMIDrivers", "..\AdvancedHMI\AdvancedHMIv399xR1\AdvancedHMIDrivers\AdvancedHMIDrivers.vbproj", "{1C35364C-105A-4537-9CA1-0FB0DC656944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,22 @@ Global
 		{F398F169-5942-4601-B61C-6E22B05E72B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F398F169-5942-4601-B61C-6E22B05E72B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F398F169-5942-4601-B61C-6E22B05E72B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A180B0-1183-4CB7-AC14-BF98320A30E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A180B0-1183-4CB7-AC14-BF98320A30E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A180B0-1183-4CB7-AC14-BF98320A30E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A180B0-1183-4CB7-AC14-BF98320A30E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928F9169-93D6-4E5F-8130-C8B1F4D3CC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928F9169-93D6-4E5F-8130-C8B1F4D3CC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928F9169-93D6-4E5F-8130-C8B1F4D3CC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928F9169-93D6-4E5F-8130-C8B1F4D3CC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7FE5B1-EF17-4966-AA84-77A5DBD1C40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7FE5B1-EF17-4966-AA84-77A5DBD1C40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7FE5B1-EF17-4966-AA84-77A5DBD1C40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7FE5B1-EF17-4966-AA84-77A5DBD1C40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C35364C-105A-4537-9CA1-0FB0DC656944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C35364C-105A-4537-9CA1-0FB0DC656944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C35364C-105A-4537-9CA1-0FB0DC656944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C35364C-105A-4537-9CA1-0FB0DC656944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
