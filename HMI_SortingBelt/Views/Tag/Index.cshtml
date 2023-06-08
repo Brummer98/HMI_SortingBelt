@@ -17,7 +17,7 @@
 
 <div class="container-fluid containerMain">
         <div class="container-fluid containerProcessControl">
-            <h1>Process control</h1>
+            <h1>Sorting Unit: Process control</h1>
             <table class="table">
                 <thead>
                     <tr>
@@ -30,9 +30,9 @@
                         <th>
                             Process control
                         </th>
-                       @* <th>
+                        <th>
                             Details
-                        </th>*@
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,16 +48,15 @@
                             <td>
                                 @Html.ActionLink("Set tag value", "Edit", new {  id=item.ID  })
                             </td>
-                            @*<td>
+                            <td>
                                 @Html.ActionLink("Details", "Details", new { id=item.ID })
-                            </td>*@
+                            </td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
 
-    <h2>Units</h2>
     <div class="row containerSortingUnit">
         <div class="col-sm-4">
             <h3>Sorting unit</h3>

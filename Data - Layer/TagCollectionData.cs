@@ -35,6 +35,7 @@ namespace Data___Layer
                                 Convert.ToInt32(sdr["ID"]),
                                 Convert.ToString(sdr["TagName"]),
                                 Convert.ToInt32(sdr["TagValue"])
+                                // Convert.ToInt32(sdr["TagValue"])
                             ));
 
                         }

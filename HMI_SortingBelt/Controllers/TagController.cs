@@ -141,5 +141,11 @@ namespace HMI_MF.Controllers
         {
             return View();
         }
+
+        // Page for the EM's in the sorting belt unit
+        public ActionResult CMPage()
+        {
+            return View();
+        }
     }
 }
