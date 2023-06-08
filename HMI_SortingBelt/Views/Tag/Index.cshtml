@@ -65,43 +65,71 @@
         <div class="col-sm-8">
             <h3>Status</h3>
             <div class="container containerStatusbox">
-                <div class="row rowStatusbox">
+                @*<div class="row rowStatusbox">
                     <div class="col-sm-4">
                         <input class="form-control" type="text" value="State" aria-label="readonly input example" readonly>
                     </div>
                     <div class="col-sm-8">
                         <input class="form-control" type="text" value="Running" aria-label="readonly input example" readonly>
                     </div>
-                </div>
-                <div class="row rowStatusbox">
+                </div>*@
+                @*<div class="row rowStatusbox">
                     <div class="col-sm-6">
                         <button type="button" class="btn btn-lg btn-secondary" disabled>Sim on</button>
                     </div>
                     <div class="col-sm-6">
                         <button type="button" class="btn btn-lg btn-light" disabled>Sim off</button>
                     </div>
-                </div>
+                </div>*@
                 <div class="row rowStatusbox">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                            Tag name
+                            </th>
+                            <th>
+                            Status
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.TagName)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.TagValue)
+                        </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                </div>
+
+                @*<div class="row rowStatusbox">
                     <div class="col-sm-6">
                         <button type="button" class="btn btn-lg btn-secondary" disabled>Auto</button>
                     </div>
                     <div class="col-sm-6">
                         <button type="button" class="btn btn-lg btn-light" disabled>Manual</button>
                     </div>
-                </div>
-                <div class="row rowStatusbox">
+                </div>*@
+                @*<div class="row rowStatusbox">
                     <div class="col-sm-4">
                         <input class="form-control" type="text" value="Alarm" aria-label="readonly input example" readonly>
                     </div>
                     <div class="col-sm-8">
                         <input class="form-control" type="text" value="CODE: 330033" aria-label="readonly input example" readonly>
                     </div>
-                </div>
-                <div class="row rowStatusbox">
+                </div>*@
+                @*<div class="row rowStatusbox">
                     <div class="col">
                         <input class="form-control" type="text" value="Parameters..." aria-label="readonly input example" readonly>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>
