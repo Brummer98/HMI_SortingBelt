@@ -28,14 +28,11 @@
                             Tag value
                         </th>
                         <th>
-                            Edit
+                            Process control
                         </th>
-                        <th>
+                       @* <th>
                             Details
-                        </th>
-                        <th>
-                            Process
-                        </th>
+                        </th>*@
                     </tr>
                 </thead>
                 <tbody>
@@ -49,166 +46,16 @@
                                 @Html.DisplayFor(modelItem => item.TagValue)
                             </td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new {  id=item.ID  })
+                                @Html.ActionLink("Set tag value", "Edit", new {  id=item.ID  })
                             </td>
-                            <td>
+                            @*<td>
                                 @Html.ActionLink("Details", "Details", new { id=item.ID })
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Start</button>
-                            </td>
+                            </td>*@
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
-
-@*    <div class="row">
-        <div class="col-sm-4">
-            <h3>Warehouse</h3>
-            <a href="Warehouse.html"><img class="colimg" src="img/Store_CM.jpg" width="85%" height="auto" /></a>
-        </div>
-        <div class="col-sm-8">
-            <h3>Status</h3>
-            <div class="container containerStatusbox">
-                <div class="row rowStatusbox">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" value="State" aria-label="readonly input example" readonly>
-                    </div>
-                    <div class="col-sm-8">
-                        <input class="form-control" type="text" value="Running" aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-secondary" disabled>Sim on</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-light" disabled>Sim off</button>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-secondary" disabled>Auto</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-light" disabled>Manual</button>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" value="Alarm" aria-label="readonly input example" readonly>
-                    </div>
-                    <div class="col-sm-8">
-                        <input class="form-control" type="text" value="CODE: 330033" aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col">
-                        <input class="form-control" type="text" value="Parameters..." aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>*@
-
-@*    <div class="row">
-        <div class="col-sm-4">
-            <h3>Crane</h3>
-            <img class="colimg" src="img/Crane_CM.jpg" width="85%" height="auto" />
-        </div>
-        <div class="col-sm-8">
-            <h3>Status</h3>
-            <div class="container containerStatusbox">
-                <div class="row rowStatusbox">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" value="State" aria-label="readonly input example" readonly>
-                    </div>
-                    <div class="col-sm-8">
-                        <input class="form-control" type="text" value="Running" aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-secondary" disabled>Sim on</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-light" disabled>Sim off</button>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-secondary" disabled>Auto</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-light" disabled>Manual</button>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" value="Alarm" aria-label="readonly input example" readonly>
-                    </div>
-                    <div class="col-sm-8">
-                        <input class="form-control" type="text" value="CODE: 330033" aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col">
-                        <input class="form-control" type="text" value="Parameters..." aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>*@
-
-@*    <div class="row">
-        <div class="col-sm-4">
-            <h3>Oven <img src="img/Alert.png" width="10%" height="auto" /> </h3>
-            <img class="colimgOven" src="img/Oven_CM.jpg" width="85%" height="auto" />
-        </div>
-        <div class="col-sm-8">
-            <h3>Status</h3>
-            <div class="container containerStatusbox">
-                <div class="row rowStatusbox">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" value="State" aria-label="readonly input example" readonly>
-                    </div>
-                    <div class="col-sm-8">
-                        <input class="form-control" type="text" value="Stopped" aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-secondary" disabled>Sim on</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-light" disabled>Sim off</button>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-light" disabled>Auto</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" class="btn btn-lg btn-secondary" disabled>Manual</button>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col-sm-4">
-                        <input class="form-control" type="text" value="Alarm" aria-label="readonly input example" readonly>
-                    </div>
-                    <div class="col-sm-8">
-                        <input class="form-control" type="text" value="CODE: 330033" aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-                <div class="row rowStatusbox">
-                    <div class="col">
-                        <input class="form-control" type="text" value="Parameters..." aria-label="readonly input example" readonly>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>*@
 
     <h2>Units</h2>
     <div class="row containerSortingUnit">
@@ -262,42 +109,6 @@
 
    
 </div>
-
-
-@*<div class="container containerStatusHome">
-    <div class="row">
-        <h3>Process control</h3>
-        <div class="col-sm-3">
-            <div class="container menuPart">
-                <div class="d-grid gap-2">
-                    <button class="btn btn-success" type="button"><h3>Start</h3></button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="container menuPart">
-                <div class="d-grid gap-2">
-                    <button class="btn btn-danger" type="button"><h3>Stop</h3></button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="container menuPart">
-                <div class="d-grid gap-2">
-                    <button class="btn btn-info" type="button"><h3>Pause</h3></button>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="container menuPart">
-                <div class="d-grid gap-2">
-                    <button class="btn btn-warning" type="button"><h3>Reset</h3></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>*@
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

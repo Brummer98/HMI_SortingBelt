@@ -137,3 +137,11 @@ body {
 .containerProcessControl {
     margin-top: 5% !important;
 }
+
+.containerEditTags {
+    background-color: #eee !important;
+    margin-top: 5%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1%;
+}
