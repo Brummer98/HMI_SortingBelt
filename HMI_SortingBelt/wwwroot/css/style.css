@@ -43,6 +43,7 @@ body {
 .colimg {
     border: 2px solid black;
     border-radius: 10px;
+    height: 17%;
 }
 
 .colimgOven {
@@ -144,4 +145,12 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     padding: 1%;
+}
+
+.containerEMs {
+    background-color: #eee;
+    height: auto;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 10px;
 }
