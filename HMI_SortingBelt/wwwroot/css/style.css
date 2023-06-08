@@ -22,6 +22,7 @@ body {
     padding: 2%;
     border: 2px solid black;
     border-radius: 10px;
+    border-style: dashed;
     max-width: 85% !important;
     text-align: center !important;
 }
@@ -30,7 +31,7 @@ body {
     /* Testing container properties etc */
     background-color: #eee;
     padding: 2%;
-    border: 2px solid black;
+    border: 2px solid #eee;
     border-radius: 10px;
     text-align: center !important;
 }
@@ -138,7 +139,7 @@ body {
 .containerProcessControl {
     margin-top: 2% !important;
     background-color: #eee !important;
-    border: 2px solid black;
+    border: 2px solid #eee;
     border-radius: 10px;
     padding: 2%;
     margin-bottom: 2% !important;
