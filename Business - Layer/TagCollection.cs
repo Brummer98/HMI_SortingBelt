@@ -14,8 +14,9 @@ namespace Business___Layer
         {
             List<TagDTO> tagDTOs = new List<TagDTO>();
             List<Data___Layer.TagDTOData> tagDataList = dataInstance.GetAllTags();
+            // dataInstance.GetAllTagsHMISignals();
 
-            foreach(var model in tagDataList)
+            foreach (var model in tagDataList)
             {
                 TagDTO tagBusinessInstance = new TagDTO();
                 tagBusinessInstance.ID = model.ID;

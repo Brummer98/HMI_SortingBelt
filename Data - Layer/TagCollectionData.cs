@@ -52,6 +52,44 @@ namespace Data___Layer
             return tagDTODatas;
         }
 
+        public List<TagDTOData> GetAllTagsHMISignals()
+        {
+            // Create a list of all database items and show them
+            List<TagDTOData> tagDTODatas = new List<TagDTOData>();
+
+            string query = "SELECT ID, TagName, TagValue FROM Tags WHERE TagName LIKE '%Clinder_State.STS%'";
+
+            using (SqlConnection con = new(constr))
+            {
+                using (SqlCommand cmd = new(query))
+                {
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        while (sdr.Read())
+                        {
+                            tagDTODatas.Add(new TagDTOData(
+                                Convert.ToInt32(sdr["ID"]),
+                                Convert.ToString(sdr["TagName"]),
+                                Convert.ToInt32(sdr["TagValue"])
+                            // Convert.ToInt32(sdr["TagValue"])
+                            ));
+
+                        }
+                    }
+                    con.Close();
+                }
+            }
+
+            if (tagDTODatas.Count == 0)
+            {
+                tagDTODatas.Add(new TagDTOData(0, "", 0));
+            }
+
+            return tagDTODatas;
+        }
+
         public List<TagDTOData> getSingleTag(int ID)
         {
             List<TagDTOData> singleTagList = new List<TagDTOData>();
