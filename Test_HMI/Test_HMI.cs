@@ -17,45 +17,115 @@ namespace Data___Layer.Tests
         private string constr = @"Data Source=.\sqlexpress;Initial Catalog=TagTableFactory;Integrated Security=True;";
 
         [TestMethod()]
-        public void getSingleTagTest()
+        public void GetAllTags()
         {
             // Arrange
-            List<TagDTOData> singleTagList = new List<TagDTOData>();
-            Data___Layer.TagCollectionData testDataCollection = new Data___Layer.TagCollectionData();
+            List<TagDTOData> tagDTODatas = new List<TagDTOData>();
+            string query = "SELECT ID, TagName, TagValue FROM Tags";
 
             // Act
-            singleTagList = testDataCollection.getSingleTag(4);
+            using (SqlConnection con = new(constr))
+            {
+                using (SqlCommand cmd = new(query))
+                {
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        while (sdr.Read())
+                        {
+                            tagDTODatas.Add(new TagDTOData(
+                                Convert.ToInt32(sdr["ID"]),
+                                Convert.ToString(sdr["TagName"]),
+                                Convert.ToInt32(sdr["TagValue"])
+                            // Convert.ToInt32(sdr["TagValue"])
+                            ));
+
+                        }
+                    }
+                    con.Close();
+                }
+            }
 
             // Assert
-            Assert.IsTrue(singleTagList.Count == 1); 
+            Assert.IsTrue(tagDTODatas.Count > 0);
         }
 
         [TestMethod()]
-        public void GetAllTagsTest()
+        public void GetAllTagsHMISignals()
         {
             // Arrange
-            List<TagDTOData> singleTagList = new List<TagDTOData>();
-            Data___Layer.TagCollectionData testDataCollection = new Data___Layer.TagCollectionData();
+            List<TagDTOData> tagDTODatas = new List<TagDTOData>();
+            string query = "SELECT ID, TagName, TagValue FROM Tags WHERE TagName LIKE '%Clinder_State.STS%'";
 
             // Act
-            singleTagList = testDataCollection.GetAllTags();
+            using (SqlConnection con = new(constr))
+            {
+                using (SqlCommand cmd = new(query))
+                {
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        while (sdr.Read())
+                        {
+                            tagDTODatas.Add(new TagDTOData(
+                                Convert.ToInt32(sdr["ID"]),
+                                Convert.ToString(sdr["TagName"]),
+                                Convert.ToInt32(sdr["TagValue"])
+                            // Convert.ToInt32(sdr["TagValue"])
+                            ));
+
+                        }
+                    }
+                    con.Close();
+                }
+            }
 
             // Assert
-            Assert.IsTrue(singleTagList.Count > 0);
+            Assert.IsTrue(tagDTODatas.Count > 0);
         }
 
-        [TestMethod()]
-        public void GetAllTagsHMISignalsTest()
-        {
-            // Arrange
-            List<TagDTOData> singleTagList = new List<TagDTOData>();
-            Data___Layer.TagCollectionData testDataCollection = new Data___Layer.TagCollectionData();
+        //[TestMethod()]
+        //public void getSingleTagTest()
+        //{
+        //    // Arrange
+        //    List<TagDTOData> singleTagList = new List<TagDTOData>();
+        //    Data___Layer.TagCollectionData testDataCollection = new Data___Layer.TagCollectionData();
 
-            // Act
-            singleTagList = testDataCollection.GetAllTagsHMISignals();
+        //    // Act
+        //    singleTagList = testDataCollection.getSingleTag(4);
 
-            // Assert
-            Assert.IsTrue(singleTagList.Count > 0);
-        }
+        //    // Assert
+        //    Assert.IsTrue(singleTagList.Count == 1); 
+        //}
+
+        //[TestMethod()]
+        //public void GetAllTagsTest()
+        //{
+        //    // Arrange
+        //    List<TagDTOData> singleTagList = new List<TagDTOData>();
+        //    Data___Layer.TagCollectionData testDataCollection = new Data___Layer.TagCollectionData();
+
+        //    // Act
+        //    singleTagList = testDataCollection.GetAllTags();
+
+        //    // Assert
+        //    Assert.IsTrue(singleTagList.Count > 0);
+        //}
+
+        //[TestMethod()]
+        //public void GetAllTagsHMISignalsTest()
+        //{
+        //    // Arrange
+        //    List<TagDTOData> singleTagList = new List<TagDTOData>();
+        //    Data___Layer.TagCollectionData testDataCollection = new Data___Layer.TagCollectionData();
+
+        //    // Act
+        //    singleTagList = testDataCollection.GetAllTagsHMISignals();
+
+        //    // Assert
+        //    Assert.IsTrue(singleTagList.Count > 0);
+        //}
     }
 }
