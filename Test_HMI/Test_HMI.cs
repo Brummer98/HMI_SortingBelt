@@ -14,6 +14,8 @@ namespace Data___Layer.Tests
     [TestClass()]
     public class Test_HMI
     {
+        private string constr = @"Data Source=.\sqlexpress;Initial Catalog=TagTableFactory;Integrated Security=True;";
+
         [TestMethod()]
         public void getSingleTagTest()
         {
