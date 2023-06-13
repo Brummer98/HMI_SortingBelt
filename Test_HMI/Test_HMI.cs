@@ -25,7 +25,7 @@ namespace Data___Layer.Tests
             singleTagList = testDataCollection.getSingleTag(4);
 
             // Assert
-            Assert.IsTrue(singleTagList.Count == 1);
+            Assert.IsTrue(singleTagList.Count == 1); 
         }
 
         [TestMethod()]
