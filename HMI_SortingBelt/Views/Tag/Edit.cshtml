@@ -23,14 +23,14 @@
                     <div class="form-group">
                         @*<label asp-for="TagName" class="control-label"></label>*@
                         <p>Tag:</p>
-                        <input asp-for="TagName" class="form-control" />
+                        <input asp-for="TagName" class="form-control" disabled/>
                         <span asp-validation-for="TagName" class="text-danger"></span>
                     </div>
                     </br>
                     <div class="form-group">
                         @*<label asp-for="TagValue" class="control-label"></label>*@
                         <p>Set tag value:</p>
-                        <input asp-for="TagValue" class="form-control" />
+                        <input max="1" min="0" asp-for="TagValue" class="form-control" />
                         <span asp-validation-for="TagValue" class="text-danger"></span>
                     </div>
                     </br>
